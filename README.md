@@ -14,7 +14,7 @@ yarn
 yarn dev
 ```
 
-With your browser pointing to the above URL, you should see the screen looking like below.
+With your browser pointing to the above URL (http://localhost:3000/), you should see the app.
 
 ## Some Final Thoughts
 
