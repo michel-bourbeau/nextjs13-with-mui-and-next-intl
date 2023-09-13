@@ -5,7 +5,7 @@ const theme = createTheme({
     mode: 'light',
   },
   typography: {
-    fontFamily: "Arial",
+    fontFamily: 'Arial',
   },
   components: {
     MuiAlert: {

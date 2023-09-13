@@ -1,18 +1,22 @@
-import { ReactNode } from "react";
-import ThemeRegistry from "../components/ThemeRegistry/ThemeRegistry";
-import { NextIntlClientProvider } from "next-intl";
-import { notFound } from "next/navigation";
+import React from 'react';
+import type { ReactNode } from 'react';
+import ThemeRegistry from '../components/ThemeRegistry/ThemeRegistry';
+import { NextIntlClientProvider } from 'next-intl';
+import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "fr" }, { locale: "es" }];
+  return [{ locale: 'en' }, { locale: 'fr' }, { locale: 'es' }];
 }
 
-type LayoutProps = {
+interface LayoutProps {
   children: ReactNode;
   params: { locale: string };
-};
+}
 
-export default async function RootLayout({ children, params: { locale } }: LayoutProps) {
+export default async function RootLayout({
+  children,
+  params: { locale },
+}: LayoutProps) {
   let messages;
   try {
     messages = (await import(`../messages/${locale}.json`)).default;
