@@ -14,25 +14,39 @@ export default function Home() {
   return (
     <Grid
       container
-      height="calc(100vh - 38px)"
       alignItems="center"
       justifyContent="center"
       direction="column"
     >
       <div style={{ marginBottom: '4rem', textAlign: 'center' }}>
+        <Button variant="outlined" href="/" sx={{ margin: '16px 0' }}>
+          {t('Index.homepage')}
+        </Button>
+
         <h4 style={{ marginBottom: 16 }}>{count}</h4>
-        <button onClick={() => dispatch(increment())}>increment</button>
-        <button
-          onClick={() => dispatch(decrement())}
-          style={{ marginInline: 16 }}
+        <Button
+          variant="contained"
+          sx={{ margin: '16px 8px' }}
+          onClick={() => dispatch(increment())}
         >
-          decrement
-        </button>
-        <button onClick={() => dispatch(reset())}>reset</button>
+          {t('Counter.increment')}
+        </Button>
+        <Button
+          variant="contained"
+          sx={{ margin: '16px 8px' }}
+          onClick={() => dispatch(decrement())}
+        >
+          {t('Counter.decrement')}
+        </Button>
+        <br />
+        <Button
+          variant="text"
+          sx={{ margin: '16px 8px' }}
+          onClick={() => dispatch(reset())}
+        >
+          {t('Counter.reset')}
+        </Button>
       </div>
-      <Button variant="outlined" href="/">
-        {t('Index.homepage')}
-      </Button>
     </Grid>
   );
 }

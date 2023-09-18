@@ -8,7 +8,10 @@
     "and": "and"
   },
   "Counter": {
-    "button": "Counter Redux"
+    "button": "Counter Redux",
+    "increment": "Increment",
+    "decrement": "Decrement",
+    "reset": "Reset"
   },
   "Robots": {
     "button": "Robots"

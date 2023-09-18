@@ -8,7 +8,10 @@
     "and": "y"
   },
   "Counter": {
-    "button": "Conde Redux"
+    "button": "Conde Redux",
+    "increment": "Incremento",
+    "decrement": "Decremento",
+    "reset": "Reiniciar"
   },
   "Robots": {
     "button": "Robots"

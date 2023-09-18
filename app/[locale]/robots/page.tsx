@@ -4,6 +4,7 @@ import React from 'react';
 import { Grid, Button } from '@mui/material';
 import { useGetUsersQuery } from '@/redux/services/userApi';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function Home() {
   const { isLoading, isFetching, data, error } = useGetUsersQuery(null);
@@ -12,12 +13,11 @@ export default function Home() {
   return (
     <Grid
       container
-      height="calc(100vh - 38px)"
       alignItems="center"
       justifyContent="center"
       direction="column"
     >
-      <Button variant="outlined" href="/">
+      <Button variant="outlined" href="/" sx={{ margin: '16px 0' }}>
         {t('Index.homepage')}
       </Button>
       {error ? (
@@ -37,10 +37,11 @@ export default function Home() {
               key={user.id}
               style={{ border: '1px solid #ccc', textAlign: 'center' }}
             >
-              <img
+              <Image
                 src={`https://robohash.org/${user.id}?set=set2&size=180x180`}
                 alt={user.name}
-                style={{ height: 180, width: 180 }}
+                width={180}
+                height={180}
               />
               <h3>{user.name}</h3>
             </div>
