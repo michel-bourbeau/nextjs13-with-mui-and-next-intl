@@ -1,6 +1,7 @@
 import React from 'react';
 import type { ReactNode } from 'react';
 import ThemeRegistry from '../components/ThemeRegistry/ThemeRegistry';
+import { Providers } from '@/redux/provider';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 
@@ -34,7 +35,9 @@ export default async function RootLayout({
       </head>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <ThemeRegistry>
-          <body id="__next">{children}</body>
+          <Providers>
+            <body id="__next">{children}</body>
+          </Providers>
         </ThemeRegistry>
       </NextIntlClientProvider>
     </html>
