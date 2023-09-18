@@ -3,9 +3,11 @@
 import React from 'react';
 import { Grid, Button } from '@mui/material';
 import { useGetUsersQuery } from '@/redux/services/userApi';
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
   const { isLoading, isFetching, data, error } = useGetUsersQuery(null);
+  const t = useTranslations();
 
   return (
     <Grid
@@ -16,7 +18,7 @@ export default function Home() {
       direction="column"
     >
       <Button variant="outlined" href="/">
-        Homepage
+        {t('Index.homepage')}
       </Button>
       {error ? (
         <p>Oh no, there was an error</p>

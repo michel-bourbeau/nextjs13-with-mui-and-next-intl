@@ -4,10 +4,12 @@ import React from 'react';
 import { Grid, Button } from '@mui/material';
 import { decrement, increment, reset } from '@/redux/features/counterSlice';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
   const count = useAppSelector((state) => state.counterReducer.value);
   const dispatch = useAppDispatch();
+  const t = useTranslations();
 
   return (
     <Grid
@@ -29,7 +31,7 @@ export default function Home() {
         <button onClick={() => dispatch(reset())}>reset</button>
       </div>
       <Button variant="outlined" href="/">
-        Homepage
+        {t('Index.homepage')}
       </Button>
     </Grid>
   );

@@ -3,16 +3,9 @@
 import React from 'react';
 import { Button, Grid, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
-import { useGetUsersQuery } from '@/redux/services/userApi';
-import { decrement, increment, reset } from '@/redux/features/counterSlice';
-import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
 export default function Home() {
-  const t = useTranslations('Index');
-  const count = useAppSelector((state) => state.counterReducer.value);
-  const dispatch = useAppDispatch();
-
-  const { isLoading, isFetching, data, error } = useGetUsersQuery(null);
+  const t = useTranslations();
 
   return (
     <Grid
@@ -23,25 +16,25 @@ export default function Home() {
       direction="column"
     >
       <Typography variant="h4" gutterBottom>
-        (NextJS-13 {t('with')} MUI {t('and')} next-intl)
+        (NextJS-13 {t('Index.with')} MUI {t('Index.and')} next-intl)
       </Typography>
       <Stack direction="row" columnGap={1}>
         <Button variant="text" href="/fr">
-          {t('fr')}
+          {t('Index.fr')}
         </Button>
         <Button variant="contained" href="/en">
-          {t('en')}
+          {t('Index.en')}
         </Button>
         <Button variant="outlined" href="/es">
-          {t('es')}
+          {t('Index.es')}
         </Button>
       </Stack>
       <Stack direction="row" columnGap={5} mt={3}>
         <Button variant="text" href="/robots">
-          Robots
+          {t('Robots.button')}
         </Button>
         <Button variant="contained" href="/counter">
-          Counter Redux
+          {t('Counter.button')}
         </Button>
       </Stack>
     </Grid>

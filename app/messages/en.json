@@ -1,9 +1,16 @@
 {
   "Index": {
+    "homepage": "Homepage",
     "fr": "French",
     "en": "English",
     "es": "Spanish",
     "with": "with",
     "and": "and"
+  },
+  "Counter": {
+    "button": "Counter Redux"
+  },
+  "Robots": {
+    "button": "Robots"
   }
 }

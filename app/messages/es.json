@@ -1,9 +1,16 @@
 {
   "Index": {
+    "homepage": "Página principal",
     "fr": "Francés",
     "en": "Inglés",
     "es": "Español",
     "with": "con",
     "and": "y"
+  },
+  "Counter": {
+    "button": "Conde Redux"
+  },
+  "Robots": {
+    "button": "Robots"
   }
 }
