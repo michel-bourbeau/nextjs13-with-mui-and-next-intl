@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Grid, Button } from '@mui/material';
-import { useGetUsersQuery } from '@/redux/services/userApi';
+import { useGetUsersQuery } from '@/redux/api/userApi';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 

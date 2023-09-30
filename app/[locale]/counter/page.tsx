@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Grid, Button } from '@mui/material';
-import { decrement, increment, reset } from '@/redux/features/counterSlice';
+import { decrement, increment, reset } from '@/redux/slices/counterSlice';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { useTranslations } from 'next-intl';
 

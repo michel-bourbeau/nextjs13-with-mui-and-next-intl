@@ -1,7 +1,7 @@
 import React from 'react';
 import type { ReactNode } from 'react';
-import ThemeRegistry from '../components/ThemeRegistry/ThemeRegistry';
-import { Providers } from '@/redux/provider';
+import ThemeProvider from '@/mui';
+import ReduxProvider from '@/redux';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 
@@ -34,11 +34,11 @@ export default async function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <NextIntlClientProvider locale={locale} messages={messages}>
-        <ThemeRegistry>
-          <Providers>
+        <ThemeProvider>
+          <ReduxProvider>
             <body id="__next">{children}</body>
-          </Providers>
-        </ThemeRegistry>
+          </ReduxProvider>
+        </ThemeProvider>
       </NextIntlClientProvider>
     </html>
   );

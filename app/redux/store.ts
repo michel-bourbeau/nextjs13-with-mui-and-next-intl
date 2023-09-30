@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from './features/counterSlice';
-import { userApi } from './services/userApi';
+import counterReducer from './slices/counterSlice';
+import { userApi } from './api/userApi';
 import { setupListeners } from '@reduxjs/toolkit/dist/query';
 
 export const store = configureStore({
