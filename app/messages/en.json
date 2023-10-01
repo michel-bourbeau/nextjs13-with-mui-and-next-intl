@@ -6,14 +6,5 @@
     "es": "Spanish",
     "with": "with",
     "and": "and"
-  },
-  "Counter": {
-    "button": "Counter Redux",
-    "increment": "Increment",
-    "decrement": "Decrement",
-    "reset": "Reset"
-  },
-  "Robots": {
-    "button": "Robots"
   }
 }

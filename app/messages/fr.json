@@ -6,14 +6,5 @@
     "es": "Espagnol",
     "with": "avec",
     "and": "et"
-  },
-  "Counter": {
-    "button": "Compteur Redux",
-    "increment": "Augmenter",
-    "decrement": "Diminuer",
-    "reset": "Réinitialiser"
-  },
-  "Robots": {
-    "button": "Robots"
   }
 }

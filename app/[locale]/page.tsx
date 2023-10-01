@@ -29,14 +29,6 @@ export default function Home() {
           {t('Index.es')}
         </Button>
       </Stack>
-      <Stack direction="row" columnGap={5} mt={3}>
-        <Button variant="text" href="/robots">
-          {t('Robots.button')}
-        </Button>
-        <Button variant="contained" href="/counter">
-          {t('Counter.button')}
-        </Button>
-      </Stack>
     </Grid>
   );
 }
